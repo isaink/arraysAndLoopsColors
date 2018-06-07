@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<li id="display"></li>
+		<script>
+
+			//PROBLEM:
+			//Consider the following arrays :
+			// color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			// o = ["th", "st", "nd", "rd"];
+			// Display the colors on the web page in the following way :
+			// "1st choice is Blue ."
+			// "2nd choice is Green."
+			// "3rd choice is Red."
+			// "4th choice is Orange."
+			// etc
+
+			//ALGORITHMS: Loop thru color to check each color.
+			//	if color's first is blue
+			//		display "1st choice is Blue"
+			//	else if color's second is Green
+			//		display "2nd choice is Green"
+			//	else if color's third is Red
+			//		display "3rd choice is Red"
+			// etc
+
+
+			var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]; 
+
+			var o = ["th", "st", "nd", "rd"];
+
+			for (var i = 0; i < color.length; i++){
+				
+				if (color[i] == "Blue") {
+					document.getElementById('display').innerHTML += "<li style='color:blue'>" + "1" + o[i+1] + " color is " +color[i] + "</li>";
+
+				}else if (color[i] == "Green"){
+					document.getElementById("display").innerHTML += "<li style='color:green'>" + "2" + o[i+1] + "color is " +color[i] + "</li>";
+				}else if (color[i] == "Red"){
+					document.getElementById("display").innerHTML += "<li style='color:red'>" + "3" + o[i+1] + "color is " +color[i] + "</li>";
+				}else{
+					document.getElementById("display").innerHTML += "<li>" + (i+1) + o[0] + "color is " +color[i] + "</li>";
+
+				}
+			}
+
+
+		</script>
+
+	</body>
+</html>
